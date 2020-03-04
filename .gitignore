@@ -67,3 +67,4 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+#cmd /C "set GIT_USER=karkranikhil&& yarn run publish-gh-pages"

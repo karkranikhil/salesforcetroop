@@ -137,7 +137,7 @@ class Index extends React.Component {
               image: `${baseUrl}img/lwc_logo.png`,
               imageAlign: "top",
               title: `[Lightning Web Component](${docUrl("LWC-introduction")})`,
-              imageLink: `${docUrl("LWC-introduction")}`
+              imageLink: `${docUrl("lwc/LWC-introduction")}`
             },
             {
               content:
@@ -147,21 +147,27 @@ class Index extends React.Component {
               title: `[Salesforce Integration](${docUrl(
                 "integration/salesforce-integration-introduction"
               )})`,
-              imageLink: `${docUrl("integration/salesforce-integration-introduction")}`
+              imageLink: `${docUrl(
+                "integration/salesforce-integration-introduction"
+              )}`
             },
             {
               content:
                 "Apex is a strongly typed, object-oriented programming language that allows developers to execute flow and transaction control statements on Salesforce servers. ",
               image: `${baseUrl}img/apex_logo.png`,
               imageAlign: "top",
-              title: `[Apex programming](${docUrl("apex/apex-Introduction")})`
+              title: `[Apex programming](${docUrl("apex/apex-Introduction")})`,
+              imageLink: `${docUrl("apex/apex-Introduction")}`
             },
             {
               content:
                 "Einstein Analytics allows you to explore all of your data quickly and easily by providing AI-powered advanced analytics, right in Salesforce.",
               image: `${baseUrl}img/einstein_logo.jpg`,
               imageAlign: "top",
-              title: `[Einstein Analytics](${docUrl("einstein/einstein-introduction")})`
+              title: `[Einstein Analytics](${docUrl(
+                "einstein/einstein-introduction"
+              )})`,
+              imageLink: `${docUrl("einstein/einstein-introduction")}`
             }
           ]}
         </Block>
