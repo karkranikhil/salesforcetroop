@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Salesforce Introduction · Salesforce Troop</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Let&#x27;s understand Salesforce through an example - Suppose there is a company that manufactures and sells mobile phones. So, that company will have the following business units."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Salesforce Introduction · Salesforce Troop"/><meta property="og:type" content="website"/><meta property="og:url" content="https://karkranikhil.github.io/salesforcetroop/"/><meta property="og:description" content="Let&#x27;s understand Salesforce through an example - Suppose there is a company that manufactures and sells mobile phones. So, that company will have the following business units."/><meta property="og:image" content="https://karkranikhil.github.io/salesforcetroop/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://karkranikhil.github.io/salesforcetroop/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/salesforcetroop/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/salesforcetroop/js/scrollSpy.js"></script><link rel="stylesheet" href="/salesforcetroop/css/main.css"/><script src="/salesforcetroop/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/salesforcetroop/"><img class="logo" src="/salesforcetroop/img/favicon.ico" alt="Salesforce Troop"/><h2 class="headerTitleWithLogo">Salesforce Troop</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/salesforcetroop/docs/admin/salesforce-overview" target="_self">BASICS</a></li><li class=""><a href="/salesforcetroop/docs/lwc/LWC-introduction" target="_self">LWC</a></li><li class=""><a href="/salesforcetroop/docs/apex/apex-introduction" target="_self">APEX</a></li><li class=""><a href="/salesforcetroop/docs/integration/salesforce-integration-introduction" target="_self">INTEGRATION</a></li><li class=""><a href="/salesforcetroop/docs/einstein/einstein-introduction" target="_self">EINSTEIN</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Salesforce Admin</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Salesforce Admin</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/salesforcetroop/docs/admin/salesforce-overview">Salesforce Introduction</a></li><li class="navListItem"><a class="navItem" href="/salesforcetroop/docs/admin/salesforce-editions">Salesforce Editions</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Salesforce Introduction</h1></header><article><div><span><p>Let's understand Salesforce through an example - Suppose there is a company that manufactures and sells mobile phones. So, that company will have the following business units.</p>
+<p><strong>Enterprise unit</strong> - This unit manufactures the phones. The enterprise unit forms the back office. It does not interact with the customer. Following are the sub-units of enterprise unit</p>
+<ul>
+<li>Inventory management</li>
+<li>Product Development</li>
+<li>Manufacturing</li>
+<li>Product Cost</li>
+<li>Resource Planning</li>
+<li>Product Planning</li>
+<li>Shipping</li>
+<li>Payment</li>
+</ul>
+<p><strong>Sales unit</strong> - This unit sells the phones and form the front office. It interacts with the customer. Following are the sub-units of Sales unit</p>
+<ul>
+<li>Customer Information</li>
+<li>Marketing</li>
+<li>Opportunities</li>
+<li>Emails</li>
+<li>Reports</li>
+</ul>
+<p><strong>Service unit</strong> - This unit takes cares of the service of the phone and forms the front office. It interacts with the customer. Following are the sub-units of Service unit</p>
+<ul>
+<li>Social customer service(Linkedin, Facebook, etc.)</li>
+<li>Emails</li>
+<li>Social Customer center(24*7)</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="erp"></a><a href="#erp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ERP</h2>
+<p>ERP stands for Enterprise resource planning. It is a process used by companies to manage and integrate the important parts of their businesses i.e., <em>Enterprise Unit</em></p>
+<p>Examples -</p>
+<ol>
+<li>SAP</li>
+<li>Oracle e-business suite</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="what-is-crm"></a><a href="#what-is-crm" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is CRM?</h2>
+<p>CRM stands for Customer relationship management (CRM). It is processed by which you manage all your company's relationships and interactions with customers and potential customers. i.e. <em>Sales Unit and Service Unit</em></p>
+<p>Examples -</p>
+<ol>
+<li>Salesforce</li>
+<li>Siebel CRM</li>
+<li>Sugar CRM</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="what-is-salesforcecom"></a><a href="#what-is-salesforcecom" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is Salesforce.com?</h2>
+<p>Salesforce is a CRM that is based on cloud computing. It's one integrated CRM platform that gives all your departments — including marketing, sales, commerce, and service — a single, shared view of every customer.
+You can use the standard application given by salesforce, but based on the business need, you can customize the application using Force.com.</p>
+<h2><a class="anchor" aria-hidden="true" id="what-is-cloud-computing-and-its-advantages"></a><a href="#what-is-cloud-computing-and-its-advantages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is Cloud computing and it's advantages?</h2>
+<p>Cloud computing is network-based computing, and the network is the Internet. All you need is a laptop with the Internet to work with salesforce. Salesforce can be used as Software as a service or Platform as a service.</p>
+<h3><a class="anchor" aria-hidden="true" id="advantages-of-cloud-computing"></a><a href="#advantages-of-cloud-computing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advantages of Cloud computing</h3>
+<ul>
+<li>Multi-tenant (Sharing the resources)</li>
+<li>Automatic Upgrades</li>
+<li>Secure</li>
+<li>Integrated</li>
+<li>Easy to Use</li>
+<li>Faster and half the cost as compared to on-premise.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="what-is-on-demand-cloud"></a><a href="#what-is-on-demand-cloud" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is On-demand Cloud?</h3>
+<p>Salesforce is an on-demand application that means you pay for what you use.</p>
+<h2><a class="anchor" aria-hidden="true" id="different-models-of-cloud-computing"></a><a href="#different-models-of-cloud-computing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Different models of cloud computing</h2>
+<p><strong>1. Software as a service(Saas) -</strong> It refers to cloud-based software that is hosted online by a company and is available for purchase on a subscription basis and is delivered via the Internet.
+<strong>Examples</strong>- Gmail, Office 365, JIRA, Dropbox, Salesforce, etc.</p>
+<p><strong>2. Platform as a service(PaaS) -</strong> It refers to cloud-based platform services that provide developers with a framework they can use to build custom applications.
+<strong>Examples</strong> - Google App Engine, Force.com, Heroku, AWS Elastic Beanstalk, etc.</p>
+<p><strong>3. Infrastructure as a service(IaaS) -</strong> It refers to cloud-based infrastructure resources that are delivered to organizations via virtualization technology that helps organizations build and manage their servers, network, operating systems, and data storage.
+<strong>Examples</strong> -Amazon Web Services (AWS), Microsoft Azure, etc.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/salesforcetroop/docs/admin/salesforce-editions"><span>Salesforce Editions</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#erp">ERP</a></li><li><a href="#what-is-crm">What is CRM?</a></li><li><a href="#what-is-salesforcecom">What is Salesforce.com?</a></li><li><a href="#what-is-cloud-computing-and-its-advantages">What is Cloud computing and it's advantages?</a><ul class="toc-headings"><li><a href="#advantages-of-cloud-computing">Advantages of Cloud computing</a></li><li><a href="#what-is-on-demand-cloud">What is On-demand Cloud?</a></li></ul></li><li><a href="#different-models-of-cloud-computing">Different models of cloud computing</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="icon-flex"><a href="https://www.linkedin.com/in/nikhil-karkra-73a15319/" target="_blank" rel="noreferrer noopener" class=""><img src="/salesforcetroop/img/linkedin.svg" alt="Linkedin URL" width="64" height="64"/></a> <a href="https://www.linkedin.com/in/nikhil-karkra-73a15319/" target="_blank" rel="noreferrer noopener" class=""><img src="/salesforcetroop/img/twitter.svg" alt="Linkedin URL" width="64" height="64"/></a><a href="https://github.com/karkranikhil/salesforcetroop" target="_blank" rel="noreferrer noopener" class=""><img src="/salesforcetroop/img/github_icon.png" alt="github URL" width="64" height="64"/></a><a href="https://www.facebook.com/Salesforce-Troop-104653287818364" target="_blank" rel="noreferrer noopener" class=""><img src="/salesforcetroop/img/facebook.svg" alt="facebook URL" width="64" height="64"/></a><div><a class="github-button" href="https://github.com/karkranikhil/salesforcetroop" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><div class="fb-like" data-href="https://karkranikhil.github.io" data-colorscheme="dark" data-layout="standard" data-share="true" data-width="225" data-show-faces="false"></div></div></div></section><section class="copyright">Copyright © 2020 Salesforce Troop</section></footer></div><script>window.fbAsyncInit = function() {FB.init({appId:'254156535575786',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+                </script><script>
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '1499316810226778');
+              fbq('track', 'PageView');
+                </script></body></html>
