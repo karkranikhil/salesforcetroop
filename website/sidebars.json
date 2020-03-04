@@ -1,0 +1,25 @@
+{
+  "docs": {
+    "Docusaurus": ["doc1", "doc9"],
+    "First Category": ["doc2"],
+    "Second Category": ["doc3"]
+  },
+  "docs-other": {
+    "First Category": ["doc4", "doc5"]
+  },
+  "Lightning-web-component": {
+    "Lightning Web Component": ["lwc1"]
+  },
+  "LWC": {
+    "Lightning Web Components": ["lwc/LWC-introduction"]
+  },
+  "Apex-programming": {
+    "Apex Programming": ["apex/apex-introduction"]
+  },
+  "Salesforce-integration": {
+    "salesforce Integration": ["integration/salesforce-integration-introduction"]
+  },
+  "Einstein": {
+    "Einstein Analytics": ["einstein/einstein-introduction"]
+  }
+}
