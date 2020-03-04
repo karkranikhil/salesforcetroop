@@ -17,9 +17,17 @@
     "Apex Programming": ["apex/apex-introduction"]
   },
   "Salesforce-integration": {
-    "salesforce Integration": ["integration/salesforce-integration-introduction"]
+    "salesforce Integration": [
+      "integration/salesforce-integration-introduction"
+    ]
   },
   "Einstein": {
     "Einstein Analytics": ["einstein/einstein-introduction"]
+  },
+  "admin": {
+    "Salesforce Admin": [
+      "admin/salesforce-overview",
+      "admin/salesforce-editions"
+    ]
   }
 }

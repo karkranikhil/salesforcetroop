@@ -9,6 +9,7 @@
 // site configuration options.
 
 // List of projects/orgs using your project for the users page.
+
 const users = [
   {
     caption: "User1",
@@ -38,8 +39,9 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: "apex/apex-introduction", label: "APEX" },
+    { doc: "admin/salesforce-overview", label: "BASICS" },
     { doc: "lwc/LWC-introduction", label: "LWC" },
+    { doc: "apex/apex-introduction", label: "APEX" },
     {
       doc: "integration/salesforce-integration-introduction",
       label: "INTEGRATION"
@@ -101,7 +103,7 @@ const siteConfig = {
 
   // Open Graph and Twitter card images.
   ogImage: "img/undraw_online.svg",
-  twitterImage: "img/undraw_tweetstorm.svg"
+  twitterImage: "img/undraw_tweetstorm.svg",
 
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
@@ -115,7 +117,15 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  //   repoUrl: 'https://github.com/facebook/test-site',
+  repoUrl: "https://github.com/karkranikhil/salesforcetroop",
+  facebookAppId: "254156535575786",
+  facebookComments: true,
+  facebookPixelId: "1499316810226778",
+  // cleanUrl: true,
+  scrollToTop: true,
+  scrollToTopOptions: {
+    zIndex: 100
+  }
 };
 
 module.exports = siteConfig;

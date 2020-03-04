@@ -23,147 +23,101 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <footer className="nav-footer" id="footer">
-        {/* <section className="sitemap">
-          <a href={this.props.config.baseUrl} className="nav-home">
-            {this.props.config.footerIcon && (
+      <>
+        <footer className="nav-footer" id="footer">
+          <section className="icon-flex">
+            <a
+              href="https://www.linkedin.com/in/nikhil-karkra-73a15319/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className=""
+            >
               <img
-                src={this.props.config.baseUrl + this.props.config.footerIcon}
-                alt={this.props.config.title}
-                width="66"
-                height="58"
+                src={`${this.props.config.baseUrl}img/linkedin.svg`}
+                alt="Linkedin URL"
+                width="64"
+                height="64"
               />
-            )}
-          </a>
-          <div>
-            <h5>Docs</h5>
-            <a href={this.docUrl("doc1.html", this.props.language)}>
-              Getting Started (or other categories)
-            </a>
-            <a href={this.docUrl("doc2.html", this.props.language)}>
-              Guides (or other categories)
-            </a>
-            <a href={this.docUrl("doc3.html", this.props.language)}>
-              API Reference (or other categories)
-            </a>
-          </div>
-          <div>
-            <h5>Community</h5>
-            <a href={this.pageUrl("users.html", this.props.language)}>
-              User Showcase
-            </a>
+            </a>{" "}
             <a
-              href="https://stackoverflow.com/questions/tagged/"
+              href="https://www.linkedin.com/in/nikhil-karkra-73a15319/"
               target="_blank"
               rel="noreferrer noopener"
+              className=""
             >
-              Stack Overflow
+              <img
+                src={`${this.props.config.baseUrl}img/twitter.svg`}
+                alt="Linkedin URL"
+                width="64"
+                height="64"
+              />
             </a>
-            <a href="https://discordapp.com/">Project Chat</a>
             <a
-              href="https://twitter.com/"
+              href="https://github.com/karkranikhil/salesforcetroop"
               target="_blank"
               rel="noreferrer noopener"
+              className=""
             >
-              Twitter
+              <img
+                src={`${this.props.config.baseUrl}img/github_icon.png`}
+                alt="github URL"
+                width="64"
+                height="64"
+              />
             </a>
-          </div>
-          <div>
-            <h5>More</h5>
-            <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
-            <a href="https://github.com/">GitHub</a>
             <a
-              className="github-button"
-              href={this.props.config.repoUrl}
-              data-icon="octicon-star"
-              data-count-href="/facebook/docusaurus/stargazers"
-              data-show-count="true"
-              data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star this project on GitHub"
+              href="https://www.facebook.com/Salesforce-Troop-104653287818364"
+              target="_blank"
+              rel="noreferrer noopener"
+              className=""
             >
-              Star
+              <img
+                src={`${this.props.config.baseUrl}img/facebook.svg`}
+                alt="facebook URL"
+                width="64"
+                height="64"
+              />
             </a>
-            {this.props.config.twitterUsername && (
-              <div className="social">
-                <a
-                  href={`https://twitter.com/${this.props.config.twitterUsername}`}
-                  className="twitter-follow-button"
-                >
-                  Follow @{this.props.config.twitterUsername}
-                </a>
-              </div>
-            )}
-            {this.props.config.facebookAppId && (
-              <div className="social">
-                <div
-                  className="fb-like"
-                  data-href={this.props.config.url}
-                  data-colorscheme="dark"
-                  data-layout="standard"
-                  data-share="true"
-                  data-width="225"
-                  data-show-faces="false"
-                />
-              </div>
-            )}
-          </div>
-        </section> */}
-        <section className="icon-flex">
-          <a
-            href="https://www.linkedin.com/in/nikhil-karkra-73a15319/"
-            target="_blank"
-            rel="noreferrer noopener"
-            className=""
-          >
-            <img
-              src={`${this.props.config.baseUrl}img/linkedin.svg`}
-              alt="Linkedin URL"
-              width="64"
-              height="64"
-            />
-          </a>{" "}
-          <a
-            href="https://www.linkedin.com/in/nikhil-karkra-73a15319/"
-            target="_blank"
-            rel="noreferrer noopener"
-            className=""
-          >
-            <img
-              src={`${this.props.config.baseUrl}img/twitter.svg`}
-              alt="Linkedin URL"
-              width="64"
-              height="64"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/nikhil-karkra-73a15319/"
-            target="_blank"
-            rel="noreferrer noopener"
-            className=""
-          >
-            <img
-              src={`${this.props.config.baseUrl}img/github_icon.png`}
-              alt="github URL"
-              width="64"
-              height="64"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/nikhil-karkra-73a15319/"
-            target="_blank"
-            rel="noreferrer noopener"
-            className=""
-          >
-            <img
-              src={`${this.props.config.baseUrl}img/facebook.svg`}
-              alt="facebook URL"
-              width="64"
-              height="64"
-            />
-          </a>
-        </section>
-        <section className="copyright">{this.props.config.copyright}</section>
-      </footer>
+            <div>
+              <a
+                className="github-button"
+                href={this.props.config.repoUrl}
+                data-icon="octicon-star"
+                data-count-href="/facebook/docusaurus/stargazers"
+                data-show-count="true"
+                data-count-aria-label="# stargazers on GitHub"
+                aria-label="Star this project on GitHub"
+              >
+                Star
+              </a>
+              {this.props.config.twitterUsername && (
+                <div className="social">
+                  <a
+                    href={`https://twitter.com/${this.props.config.twitterUsername}`}
+                    className="twitter-follow-button"
+                  >
+                    Follow @{this.props.config.twitterUsername}
+                  </a>
+                </div>
+              )}
+              {this.props.config.facebookAppId && (
+                <div className="social">
+                  <div
+                    className="fb-like"
+                    data-href={this.props.config.url}
+                    data-colorscheme="dark"
+                    data-layout="standard"
+                    data-share="true"
+                    data-width="225"
+                    data-show-faces="false"
+                  />
+                </div>
+              )}
+            </div>
+          </section>
+          <section className="copyright">{this.props.config.copyright}</section>
+        </footer>
+      </>
     );
   }
 }
