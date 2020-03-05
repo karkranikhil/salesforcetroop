@@ -39,8 +39,23 @@
       "integration/salesforce-integration-introduction": {
         "title": "Salesforce Integration"
       },
+      "lwc/lwc-browser-support": {
+        "title": "LWC Browser support"
+      },
       "lwc/LWC-introduction": {
         "title": "LWC Introduction"
+      },
+      "lwc/salesforce-dx-project-setup": {
+        "title": "Salesforce DX project setup."
+      },
+      "lwc/salesforce-dx-setup": {
+        "title": "Salesforce DX environment setup"
+      },
+      "lwc/why-lightning-web-component": {
+        "title": "Why Lightning Web Component"
+      },
+      "lwc/hello-world-using-lwc": {
+        "title": "Hello world using LWC"
       },
       "lwc1": {
         "title": "LWC Introduction"

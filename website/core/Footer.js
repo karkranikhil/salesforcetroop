@@ -6,7 +6,7 @@
  */
 
 const React = require("react");
-
+// const Disqus = require("disqus-react");
 class Footer extends React.Component {
   docUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
@@ -22,8 +22,23 @@ class Footer extends React.Component {
   }
 
   render() {
+    // const disqusConfig = {
+    //   url: window.location.origin,
+    //   identifier: window.location.pathname,
+    //   title: window.location.pathname.split("/").reverse()[0]
+    // };
+    // const disqusShortname = "salesforce-troop"; //found in your Disqus.com dashboard
+    // const disqusConfig = {
+    //   url: "http://localhost:3001", //this.props.pageUrl
+    //   identifier: "salesforcetroop", //this.props.uniqueId
+    //   title: "salesforcetroop" //this.props.title
+    // };
     return (
       <>
+        {/* <Disqus.DiscussionEmbed
+          shortname={disqusShortname}
+          config={disqusConfig}
+        /> */}
         <footer className="nav-footer" id="footer">
           <section className="icon-flex">
             <a

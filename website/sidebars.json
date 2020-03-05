@@ -11,7 +11,14 @@
     "Lightning Web Component": ["lwc1"]
   },
   "LWC": {
-    "Lightning Web Components": ["lwc/LWC-introduction"]
+    "Lightning Web Components": [
+      "lwc/LWC-introduction",
+      "lwc/why-lightning-web-component",
+      "lwc/lwc-browser-support",
+      "lwc/salesforce-dx-setup",
+      "lwc/salesforce-dx-project-setup",
+      "lwc/hello-world-using-lwc"
+    ]
   },
   "Apex-programming": {
     "Apex Programming": ["apex/apex-introduction"]
