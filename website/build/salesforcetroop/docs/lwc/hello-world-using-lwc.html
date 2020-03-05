@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Hello world using LWC · Salesforce Troop</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Before creating the Lightning Web Component make sure you have completed the [Salesforce DX environment setup](/salesforcetroop/docs/lwc/salesforce-dx-setup) and [Salesforce DX project setup](/salesforcetroop/docs/lwc/salesforce-dx-project-setup) section."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Hello world using LWC · Salesforce Troop"/><meta property="og:type" content="website"/><meta property="og:url" content="https://karkranikhil.github.io/salesforcetroop/"/><meta property="og:description" content="Before creating the Lightning Web Component make sure you have completed the [Salesforce DX environment setup](/salesforcetroop/docs/lwc/salesforce-dx-setup) and [Salesforce DX project setup](/salesforcetroop/docs/lwc/salesforce-dx-project-setup) section."/><meta property="og:image" content="https://karkranikhil.github.io/salesforcetroop/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://karkranikhil.github.io/salesforcetroop/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/salesforcetroop/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/salesforcetroop/js/scrollSpy.js"></script><link rel="stylesheet" href="/salesforcetroop/css/main.css"/><script src="/salesforcetroop/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/salesforcetroop/"><img class="logo" src="/salesforcetroop/img/favicon.ico" alt="Salesforce Troop"/><h2 class="headerTitleWithLogo">Salesforce Troop</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/salesforcetroop/docs/admin/salesforce-overview" target="_self">BASICS</a></li><li class="siteNavGroupActive"><a href="/salesforcetroop/docs/lwc/LWC-introduction" target="_self">LWC</a></li><li class=""><a href="/salesforcetroop/docs/apex/apex-introduction" target="_self">APEX</a></li><li class=""><a href="/salesforcetroop/docs/integration/salesforce-integration-introduction" target="_self">INTEGRATION</a></li><li class=""><a href="/salesforcetroop/docs/einstein/salesforce-analytics-query-language-saql" target="_self">EINSTEIN</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Lightning Web Components</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Lightning Web Components</h3><ul class=""><li class="navListItem"><a class="navItem" href="/salesforcetroop/docs/lwc/LWC-introduction">LWC Introduction</a></li><li class="navListItem"><a class="navItem" href="/salesforcetroop/docs/lwc/why-lightning-web-component">Why Lightning Web Component</a></li><li class="navListItem"><a class="navItem" href="/salesforcetroop/docs/lwc/lwc-browser-support">LWC Browser support</a></li><li class="navListItem"><a class="navItem" href="/salesforcetroop/docs/lwc/salesforce-dx-setup">Salesforce DX environment setup</a></li><li class="navListItem"><a class="navItem" href="/salesforcetroop/docs/lwc/salesforce-dx-project-setup">Salesforce DX project setup.</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/salesforcetroop/docs/lwc/hello-world-using-lwc">Hello world using LWC</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Hello world using LWC</h1></header><article><div><span><p>Before creating the Lightning Web Component make sure you have completed the <a href="/salesforcetroop/docs/lwc/salesforce-dx-setup">Salesforce DX environment setup</a> and <a href="/salesforcetroop/docs/lwc/salesforce-dx-project-setup">Salesforce DX project setup</a> section.</p>
+<h2><a class="anchor" aria-hidden="true" id="create-a-lightning-web-component"></a><a href="#create-a-lightning-web-component" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a Lightning Web Component</h2>
+<ol>
+<li><p>In VS Code, open the Command Palette by pressing <code>Ctrl+Shift+P</code> on Windows or <code>Cmd+Shift+P</code> on macOS.</p></li>
+<li><p>Type <code>SFDX</code> and Select <code>SFDX: Create Lightning Web Component.</code></p></li>
+</ol>
+<p><img src="/salesforcetroop/docs/assets/LWC/CreateLWC.png" alt="VS code Create LWC"></p>
+<ol start="3">
+<li><p>Type <code>helloWorld</code> as the name of the new component and press <code>Enter.</code></p>
+<blockquote>
+<p>Always use the first letter as lowercase, While naming LWC components.
+We use the camel case name to the component i.e., helloWorld.</p>
+</blockquote></li>
+<li><p>Again, Press <code>Enter</code> to accept the default <code>force-app/main/default/lwc.</code></p></li>
+<li><p>Goto your <code>lwc</code> folder, you will see one new component with the name <code>helloWord</code> gets created.</p></li>
+</ol>
+<p><img src="/salesforcetroop/docs/assets/LWC/helloWorldLwc.png" alt="Hello world component"></p>
+<ol start="6">
+<li>If you see the <code>helloWorld</code> component. It has three files</li>
+</ol>
+<ul>
+<li><strong><code>helloWorld.html</code> -</strong> This file contains your component HTML</li>
+</ul>
+<blockquote>
+<p>Every UI Component must have an HTML file with the root tag <code>&lt;template&gt;</code></p>
+</blockquote>
+<ul>
+<li><p><strong>helloWorld.js -</strong> This file defines our component and helps to bind the data to the UI.</p>
+<blockquote>
+<p>The class name should always be Pascal Case i.e., the first letter of each word is capitalized</p>
+</blockquote></li>
+<li><p><strong>helloWorld.js-meta.xml -</strong> This configuration file defines the metadata values for the component. Also, we specify which type of lightning page this component can be added.</p></li>
+</ul>
+<blockquote>
+<p><code>html</code>, <code>js</code> and <code>meta.xml</code> file is mandatory for any component. There are other optional files like <code>css</code>, <code>extra js file</code> <code>test file</code>, <code>SVG icon</code> you can add to the component based on your requirement</p>
+</blockquote>
+<p>Add the following code to the corresponding file of your project. Don't worry will learn the meaning of each and everything going forward.</p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-5-tab-6" class="nav-link active" data-group="group_5" data-tab="tab-group-5-content-6">helloWorld.html</div><div id="tab-group-5-tab-7" class="nav-link" data-group="group_5" data-tab="tab-group-5-content-7">helloWorld.js</div><div id="tab-group-5-tab-8" class="nav-link" data-group="group_5" data-tab="tab-group-5-content-8">helloWorld.js-meta.xml</div></div><div class="tab-content"><div id="tab-group-5-content-6" class="tab-pane active" data-group="group_5" tabindex="-1"><div><span><pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">lightning-card</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"HelloWorld"</span> <span class="hljs-attr">icon-name</span>=<span class="hljs-string">"custom:custom14"</span>&gt;</span><br />    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slds-m-around_medium"</span>&gt;</span><br />      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Hello, {greeting}!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br />      <span class="hljs-tag">&lt;<span class="hljs-name">lightning-input</span><br />        <span class="hljs-attr">label</span>=<span class="hljs-string">"Name"</span><br />        <span class="hljs-attr">value</span>=<span class="hljs-string">"{greeting}"</span><br />        <span class="hljs-attr">onchange</span>=<span class="hljs-string">"{changeHandler}"</span><br />      &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">lightning-input</span>&gt;</span><br />    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;/<span class="hljs-name">lightning-card</span>&gt;</span><br /><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span><br /></code></pre>
+</span></div></div><div id="tab-group-5-content-7" class="tab-pane" data-group="group_5" tabindex="-1"><div><span><pre><code class="hljs css language-js"><span class="hljs-keyword">import</span> { LightningElement, track } <span class="hljs-keyword">from</span> <span class="hljs-string">"lwc"</span>;<br /><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">LightningElement</span> </span>{<br />  @track greeting = <span class="hljs-string">"World"</span>;<br />  changeHandler(event) {<br />    <span class="hljs-keyword">this</span>.greeting = event.target.value;<br />  }<br />}<br /></code></pre>
+</span></div></div><div id="tab-group-5-content-8" class="tab-pane" data-group="group_5" tabindex="-1"><div><span><pre><code class="hljs css language-xml"><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br />    <span class="hljs-tag">&lt;<span class="hljs-name">LightningComponentBundle</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://soap.sforce.com/2006/04/metadata"</span> <span class="hljs-attr">fqn</span>=<span class="hljs-string">"helloWorld"</span>&gt;</span><br />        <span class="hljs-tag">&lt;<span class="hljs-name">apiVersion</span>&gt;</span>46.0<span class="hljs-tag">&lt;/<span class="hljs-name">apiVersion</span>&gt;</span><br />        <span class="hljs-tag">&lt;<span class="hljs-name">isExposed</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">isExposed</span>&gt;</span><br />        <span class="hljs-tag">&lt;<span class="hljs-name">targets</span>&gt;</span><br />            <span class="hljs-tag">&lt;<span class="hljs-name">target</span>&gt;</span>lightning__AppPage<span class="hljs-tag">&lt;/<span class="hljs-name">target</span>&gt;</span><br />            <span class="hljs-tag">&lt;<span class="hljs-name">target</span>&gt;</span>lightning__RecordPage<span class="hljs-tag">&lt;/<span class="hljs-name">target</span>&gt;</span><br />            <span class="hljs-tag">&lt;<span class="hljs-name">target</span>&gt;</span>lightning__HomePage<span class="hljs-tag">&lt;/<span class="hljs-name">target</span>&gt;</span><br />          <span class="hljs-tag">&lt;/<span class="hljs-name">targets</span>&gt;</span><br /><span class="hljs-tag">&lt;/<span class="hljs-name">LightningComponentBundle</span>&gt;</span><br /></code></pre>
+</span></div></div></div></div>
+<h2><a class="anchor" aria-hidden="true" id="deploy-helloworld-component-to-org"></a><a href="#deploy-helloworld-component-to-org" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploy <code>helloWorld</code> component to Org</h2>
+<ol>
+<li>`Right-click'the default folder.</li>
+<li>Click <code>SFDX: Deploy Source to Org</code> from the options</li>
+</ol>
+<p><img src="/salesforcetroop/docs/assets/LWC/rightClickDeploy.png" alt="Right click Deploy"></p>
+<ol start="3">
+<li>In the Output tab of the integrated terminal, view the results of your deployment. You should have also received a notice that <code>states: SFDX: Deploy Source to Org ... ended with exit code 0</code>. This means that the command ran successfully.</li>
+</ol>
+<p><img src="/salesforcetroop/docs/assets/LWC/successDeploy.png" alt="Successfull Deploy"></p>
+<h2><a class="anchor" aria-hidden="true" id="add-component-to-sales-app-in-lightning-experience"></a><a href="#add-component-to-sales-app-in-lightning-experience" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add Component to Sales App in Lightning Experience</h2>
+<ol>
+<li><p>In VS Code, open the Command Palette by pressing <code>Ctrl+Shift+P</code> on Windows or <code>Cmd+Shift+P</code> on macOS.</p></li>
+<li><p>Type <code>SFDX</code> and Select <code>Select SFDX: Open Default Org</code></p></li>
+<li><p>Click the <code>app launcher icon</code> it will open the App Launcher, then click <code>Sales</code>.</p></li>
+<li><p>Once <code>Sales</code> app is opened, Click the <code>gear icon</code> shown in the top right corner, then click <code>Edit Page</code>. It will open the <em>Lightning App Builder</em></p></li>
+<li><p>Drag the <code>helloWorld</code> Lightning web component from the list of custom components to the top of the Page Canvas and Click <code>Save</code>.</p></li>
+</ol>
+<p><img src="/salesforcetroop/docs/assets/LWC/builder.png" alt="Right click Deploy"></p>
+<ol start="6">
+<li>Click <code>Activate</code>.</li>
+<li>Click <code>Assign as Org Default</code> and then click <code>Save</code></li>
+<li>Click <code>Save</code> again, then click <code>Back</code> to return to the Home page.</li>
+<li>Refresh the page to view your new component.</li>
+</ol>
+<p><img src="/salesforcetroop/docs/assets/LWC/finalDashboard.png" alt="Right click Deploy"></p>
+<ol start="10">
+<li>Hurray!! You've finally made your first Lightning web component!</li>
+</ol>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/salesforcetroop/docs/lwc/salesforce-dx-project-setup"><span class="arrow-prev">← </span><span>Salesforce DX project setup.</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-a-lightning-web-component">Create a Lightning Web Component</a></li><li><a href="#deploy-helloworld-component-to-org">Deploy <code>helloWorld</code> component to Org</a></li><li><a href="#add-component-to-sales-app-in-lightning-experience">Add Component to Sales App in Lightning Experience</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="icon-flex"><a href="https://www.linkedin.com/in/nikhil-karkra-73a15319/" target="_blank" rel="noreferrer noopener" class=""><img src="/salesforcetroop/img/linkedin.svg" alt="Linkedin URL" width="64" height="64"/></a> <a href="https://www.linkedin.com/in/nikhil-karkra-73a15319/" target="_blank" rel="noreferrer noopener" class=""><img src="/salesforcetroop/img/twitter.svg" alt="Linkedin URL" width="64" height="64"/></a><a href="https://github.com/karkranikhil/salesforcetroop" target="_blank" rel="noreferrer noopener" class=""><img src="/salesforcetroop/img/github_icon.png" alt="github URL" width="64" height="64"/></a><a href="https://www.facebook.com/Salesforce-Troop-104653287818364" target="_blank" rel="noreferrer noopener" class=""><img src="/salesforcetroop/img/facebook.svg" alt="facebook URL" width="64" height="64"/></a><div><a class="github-button" href="https://github.com/karkranikhil/salesforcetroop" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><div class="fb-like" data-href="https://karkranikhil.github.io" data-colorscheme="dark" data-layout="standard" data-share="true" data-width="225" data-show-faces="false"></div></div></div></section><section class="copyright">Copyright © 2020 Salesforce Troop</section></footer></div><script>window.fbAsyncInit = function() {FB.init({appId:'254156535575786',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+                </script><script>
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '1499316810226778');
+              fbq('track', 'PageView');
+                </script></body></html>

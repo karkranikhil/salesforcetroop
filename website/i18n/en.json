@@ -14,6 +14,9 @@
       "apex/apex-introduction": {
         "title": "Apex Introduction"
       },
+      "apex/Set-up-Developer-account": {
+        "title": "Set up Developer account"
+      },
       "doc1": {
         "title": "Latin-ish",
         "sidebar_label": "Example Page"
@@ -27,8 +30,8 @@
       "doc9": {
         "title": "This is Doc 9"
       },
-      "einstein/einstein-introduction": {
-        "title": "Einstein Introduction"
+      "einstein/salesforce-analytics-query-language-saql": {
+        "title": "Salesforce Analytics Query Language(SAQL)"
       },
       "doc4": {
         "title": "Other Document"

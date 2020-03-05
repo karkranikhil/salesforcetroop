@@ -11,7 +11,7 @@
     "Lightning Web Component": ["lwc1"]
   },
   "LWC": {
-    "Lightning Web Components": [
+    "Lightning Web Component": [
       "lwc/LWC-introduction",
       "lwc/why-lightning-web-component",
       "lwc/lwc-browser-support",
@@ -21,7 +21,10 @@
     ]
   },
   "Apex-programming": {
-    "Apex Programming": ["apex/apex-introduction"]
+    "Apex Programming": [
+      "apex/apex-introduction",
+      "apex/Set-up-Developer-account"
+    ]
   },
   "Salesforce-integration": {
     "salesforce Integration": [
@@ -29,7 +32,7 @@
     ]
   },
   "Einstein": {
-    "Einstein Analytics": ["einstein/einstein-introduction"]
+    "Einstein Analytics": ["einstein/salesforce-analytics-query-language-saql"]
   },
   "admin": {
     "Salesforce Admin": [

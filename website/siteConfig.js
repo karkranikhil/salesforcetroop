@@ -46,7 +46,10 @@ const siteConfig = {
       doc: "integration/salesforce-integration-introduction",
       label: "INTEGRATION"
     },
-    { doc: "einstein/einstein-introduction", label: "EINSTEIN" }
+    {
+      doc: "einstein/salesforce-analytics-query-language-saql",
+      label: "EINSTEIN"
+    }
   ],
 
   /****actual headerlink */
