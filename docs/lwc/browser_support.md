@@ -1,6 +1,7 @@
 ---
 id: lwc-browser-support
 title: LWC Browser support
+description: "Salesforce Troop LWC Browser support || Lightning web components supported by almost browser with specifi version. Below is the list of browsers that support Lightning web component with their limitations"
 ---
 
 Below is the list of browsers that support Lightning web component with their limitations

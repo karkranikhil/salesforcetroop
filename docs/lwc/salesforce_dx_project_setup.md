@@ -1,6 +1,7 @@
 ---
 id: salesforce-dx-project-setup
 title: Salesforce DX project setup.
+description: "Salesforce DX project setup || Before creating the Lightning Web Component, we need to set up the salesforce DX project. In the previous article, we already have covered the prerequisite for creating the DX project."
 ---
 Before creating the Lightning Web Component, we need to set up the salesforce DX project. In the previous article, we already have covered the prerequisite for creating the DX project.
 

@@ -45,14 +45,29 @@
       "lwc/lwc-browser-support": {
         "title": "LWC Browser support"
       },
+      "lwc/salesforce-conditional-rendering": {
+        "title": "Conditional rendering"
+      },
+      "lwc/salesforce-data-binding": {
+        "title": "One-Way Data Binding"
+      },
       "lwc/LWC-introduction": {
         "title": "LWC Introduction"
+      },
+      "lwc/lwc-forEach-looping-in-template": {
+        "title": "for:each loop"
+      },
+      "lwc/lwc-iterator-looping-in-template": {
+        "title": "iterator loop"
       },
       "lwc/salesforce-dx-project-setup": {
         "title": "Salesforce DX project setup."
       },
       "lwc/salesforce-dx-setup": {
         "title": "Salesforce DX environment setup"
+      },
+      "lwc/salesforce-two-way-data-binding": {
+        "title": "Two-Way Data Binding"
       },
       "lwc/why-lightning-web-component": {
         "title": "Why Lightning Web Component"
@@ -76,7 +91,8 @@
       "First Category": "First Category",
       "Second Category": "Second Category",
       "Lightning Web Component": "Lightning Web Component",
-      "Lightning Web Components": "Lightning Web Components",
+      "Getting Started": "Getting Started",
+      "Basics fundamentals": "Basics fundamentals",
       "Apex Programming": "Apex Programming",
       "salesforce Integration": "salesforce Integration",
       "Einstein Analytics": "Einstein Analytics",

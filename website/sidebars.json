@@ -11,13 +11,20 @@
     "Lightning Web Component": ["lwc1"]
   },
   "LWC": {
-    "Lightning Web Component": [
+    "Getting Started": [
       "lwc/LWC-introduction",
       "lwc/why-lightning-web-component",
       "lwc/lwc-browser-support",
       "lwc/salesforce-dx-setup",
       "lwc/salesforce-dx-project-setup",
       "lwc/hello-world-using-lwc"
+    ],
+    "Basics fundamentals": [
+      "lwc/salesforce-data-binding",
+      "lwc/salesforce-two-way-data-binding",
+      "lwc/salesforce-conditional-rendering",
+      "lwc/lwc-forEach-looping-in-template",
+      "lwc/lwc-iterator-looping-in-template"
     ]
   },
   "Apex-programming": {

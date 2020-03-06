@@ -20,7 +20,7 @@ Before creating the Lightning Web Component make sure you have completed the [Sa
 
 4. Again, Press `Enter` to accept the default `force-app/main/default/lwc.`
 
-5. Goto your `lwc` folder, you will see one new component with the name `helloWord` gets created.
+5. Goto your `lwc` folder, you will see one new component with the name `helloWorld` gets created.
 
 ![Hello world component](assets/LWC/helloWorldLwc.png)
 

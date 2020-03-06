@@ -1,6 +1,7 @@
 ---
 id: salesforce-dx-setup
 title: Salesforce DX environment setup
+description: "Salesforce Troop DX environment setup || To create a Lightning web component from the CLI, you must have an lwc directory in your Salesforce DX project. There are many steps you have to follow to set up this."
 ---
 
 To create a Lightning web component from the CLI, you must have an lwc directory in your Salesforce DX project.
@@ -32,7 +33,7 @@ _Note - Scratch orgs do not replace sandboxes_
 
 _Note - After you enable Dev Hub, you can’t disable it._
 
-   ![Salesforce cli Version number](assets/LWC/dev_hub.jpg)
+![Salesforce cli Version number](assets/LWC/dev_hub.jpg)
 
 ## Install the Visual Studio Code
 

@@ -73,7 +73,7 @@ const siteConfig = {
     primaryColor: "#295646",
     secondaryColor: "#1c3c31"
   },
-
+  usePrism: ['jsx', 'js', 'html', 'xml', 'css'],
   /* Custom fonts for website */
   /*
   fonts: {
@@ -100,7 +100,7 @@ const siteConfig = {
   scripts: [
     "https://buttons.github.io/buttons.js",
     "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
-    "/js/code-block-buttons.js"
+    "/salesforcetroop/js/code-block-buttons.js"
   ],
 
   // On page navigation for the current documentation page.
