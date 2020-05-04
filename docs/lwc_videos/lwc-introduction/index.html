@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Intro to LWC and how to setup DX environment and DX project · Salesforce Troop</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&#x27;Salesforce Troop LWC Introduction || Lightning web components are custom HTML elements built using HTML and modern JavaScript. Lightning Web Components uses core Web Components standards and provides us only what&#x27;s necessary to perform well in browsers supported by Salesforce&#x27;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Intro to LWC and how to setup DX environment and DX project · Salesforce Troop"/><meta property="og:type" content="website"/><meta property="og:url" content="https://karkranikhil.github.io/salesforcetroop/"/><meta property="og:description" content="&#x27;Salesforce Troop LWC Introduction || Lightning web components are custom HTML elements built using HTML and modern JavaScript. Lightning Web Components uses core Web Components standards and provides us only what&#x27;s necessary to perform well in browsers supported by Salesforce&#x27;"/><meta property="og:image" content="https://karkranikhil.github.io/salesforcetroop/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://karkranikhil.github.io/salesforcetroop/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/salesforcetroop/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="/salesforcetroop/js/buttons.js"></script><script type="text/javascript" src="/salesforcetroop/js/clipboard.min.js"></script><script type="text/javascript" src="/salesforcetroop/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/salesforcetroop/js/scrollSpy.js"></script><link rel="stylesheet" href="/salesforcetroop/css/prism.css"/><link rel="stylesheet" href="/salesforcetroop/css/main.css"/><script src="/salesforcetroop/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/salesforcetroop/"><img class="logo" src="/salesforcetroop/img/favicon.ico" alt="Salesforce Troop"/><h2 class="headerTitleWithLogo">Salesforce Troop</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/salesforcetroop/docs/lwc/LWC-introduction" target="_self">LWC</a></li><li class="siteNavGroupActive siteNavItemActive"><a href="/salesforcetroop/docs/lwc_videos/lwc-introduction" target="_self">LWC VIDEOS</a></li><li class=""><a href="/salesforcetroop/docs/integration/salesforce-integration-introduction" target="_self">INTEGRATION</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Getting Started</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/salesforcetroop/docs/lwc_videos/lwc-introduction">Intro to LWC and how to setup DX environment and DX project</a></li><li class="navListItem"><a class="navItem" href="/salesforcetroop/docs/lwc_videos/build-and-deploy-lwc">Build and Deploy your first LWC</a></li><li class="navListItem"><a class="navItem" href="/salesforcetroop/docs/lwc_videos/javascript-for-building-lwc">JavaScript Concepts To Learn Before Building LWC</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Basics fundamentals</h3><ul class=""><li class="navListItem"><a class="navItem" href="/salesforcetroop/docs/lwc_videos/data-binding-lwc">Data Binding In Lightning Web Component</a></li><li class="navListItem"><a class="navItem" href="/salesforcetroop/docs/lwc_videos/template-looping-lwc">Template Looping In Lightning Web Component</a></li><li class="navListItem"><a class="navItem" href="/salesforcetroop/docs/lwc_videos/conditional-rendering-lwc">Conditional Rendering Of Template In Lightning Web Component</a></li><li class="navListItem"><a class="navItem" href="/salesforcetroop/docs/lwc_videos/render-multiple-template-lwc">Render Multiple templates in Lightning Web Component</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Components communicataion</h3><ul class=""><li class="navListItem"><a class="navItem" href="/salesforcetroop/docs/lwc_videos/parent-to-child-communication-lwc">Build and Deploy your first Lightning Web Component</a></li><li class="navListItem"><a class="navItem" href="/salesforcetroop/docs/lwc_videos/child-to-parent-communication-lwc">Child To Parent Component Communication</a></li><li class="navListItem"><a class="navItem" href="/salesforcetroop/docs/lwc_videos/component-to-component-event-communication">Component To Component Event Communication Using PubSub Module</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Intro to LWC and how to setup DX environment and DX project</h1></header><article><div><span><iframe width="920" height="568" src="https://www.youtube.com/embed/SRgR852RFDs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/salesforcetroop/docs/lwc_videos/build-and-deploy-lwc"><span>Build and Deploy your first LWC</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="icon-flex"><a href="https://www.linkedin.com/in/nikhil-karkra-73a15319/" target="_blank" rel="noreferrer noopener" class=""><img src="/salesforcetroop/img/linkedin.svg" alt="Linkedin URL" width="64" height="64"/></a> <a href="https://www.linkedin.com/in/nikhil-karkra-73a15319/" target="_blank" rel="noreferrer noopener" class=""><img src="/salesforcetroop/img/twitter.svg" alt="Linkedin URL" width="64" height="64"/></a><a href="https://www.facebook.com/Salesforce-Troop-104653287818364" target="_blank" rel="noreferrer noopener" class=""><img src="/salesforcetroop/img/facebook.svg" alt="facebook URL" width="64" height="64"/></a><div><a class="github-button" href="https://github.com/karkranikhil/salesforcetroop" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 Salesforce Troop</section></footer></div><script>window.fbAsyncInit = function() {FB.init({appId:'254156535575786',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+                </script><script>
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '1499316810226778');
+              fbq('track', 'PageView');
+                </script></body></html>
