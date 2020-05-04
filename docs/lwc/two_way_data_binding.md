@@ -1,14 +1,20 @@
 ---
 id: salesforce-two-way-data-binding
-title: Two-Way Data Binding
+title: Two-Way Data Binding (@track)
 description: "Salesforce Troop Data Binding || Two-way data binding in LWC will help users to exchange data from the controller to the template and form template to the controller. It will help users to establish communication bi-directionally."
 ---
+<!-- blank line -->
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/SRgR852RFDs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- blank line -->
+
 
 ## What is Two-way Data Binding?
 
 Two-way data binding in LWC will help users to exchange data from the controller to the template and form template to the controller. It will help users to establish communication bi-directionally.
 
 ![Two Way Data Binding](assets/LWC/twoWayDataBinding.PNG)
+
+> Before Spring ’20, to make a field reactive, you had to decorate it with @track. You see this approach used in older code samples, and it’s still supported.
 
 ## How to achieve Two-Way Data Binding?
 

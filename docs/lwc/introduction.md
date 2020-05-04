@@ -64,3 +64,4 @@ The HTML `<template>` tag allows us to write reusable chunks of DOM. Inside a te
 - Create ready-made structures
 - Contains HTML, CSS and JS
 - Highly reusable
+

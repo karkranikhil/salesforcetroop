@@ -8,6 +8,7 @@
 const React = require("react");
 // const Disqus = require("disqus-react");
 class Footer extends React.Component {
+
   docUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
     const docsUrl = this.props.config.docsUrl;
@@ -39,6 +40,8 @@ class Footer extends React.Component {
           shortname={disqusShortname}
           config={disqusConfig}
         /> */}
+        
+
         <footer className="nav-footer" id="footer">
           <section className="icon-flex">
             <a
@@ -67,7 +70,7 @@ class Footer extends React.Component {
                 height="64"
               />
             </a>
-            <a
+            {/* <a
               href="https://github.com/karkranikhil/salesforcetroop"
               target="_blank"
               rel="noreferrer noopener"
@@ -79,7 +82,7 @@ class Footer extends React.Component {
                 width="64"
                 height="64"
               />
-            </a>
+            </a> */}
             <a
               href="https://www.facebook.com/Salesforce-Troop-104653287818364"
               target="_blank"
@@ -105,7 +108,7 @@ class Footer extends React.Component {
               >
                 Star
               </a>
-              {this.props.config.twitterUsername && (
+              {/* {this.props.config.twitterUsername && (
                 <div className="social">
                   <a
                     href={`https://twitter.com/${this.props.config.twitterUsername}`}
@@ -127,7 +130,7 @@ class Footer extends React.Component {
                     data-show-faces="false"
                   />
                 </div>
-              )}
+              )} */}
             </div>
           </section>
           <section className="copyright">{this.props.config.copyright}</section>

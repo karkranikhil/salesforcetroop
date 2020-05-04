@@ -24,7 +24,38 @@
       "lwc/salesforce-two-way-data-binding",
       "lwc/salesforce-conditional-rendering",
       "lwc/lwc-forEach-looping-in-template",
-      "lwc/lwc-iterator-looping-in-template"
+      "lwc/lwc-iterator-looping-in-template",
+      "lwc/render-multiple-template"
+    ],
+    "Parent to Child Communication":[
+      "lwc/passing-string-data-parent-to-child-component",
+      "lwc/passing-array-data-parent-to-child-component",
+      "lwc/passing-data-parent-to-child-on-action",
+      "lwc/calling-child-method-from-parent-component"
+    ],
+    "Child to Parent Communication": [
+      "lwc/simple-event-child-to-parent-component",
+      "lwc/passing-data-with-event-child-to-parent-component",
+      "lwc/event-with-bubbling-child-to-parent-component"
+    ]
+  },
+  "LWC-Videos":{
+    "Getting Started": [
+      "lwc_videos/lwc-introduction",
+      "lwc_videos/build-and-deploy-lwc",
+      "lwc_videos/javascript-for-building-lwc"
+    ],
+    "Basics fundamentals": [
+      "lwc_videos/data-binding-lwc",
+      "lwc_videos/template-looping-lwc",
+      "lwc_videos/conditional-rendering-lwc",
+      "lwc_videos/conditional-rendering-lwc",
+      "lwc_videos/render-multiple-template-lwc"
+    ],
+    "Components communicataion":[
+      "lwc_videos/parent-to-child-communication-lwc",
+      "lwc_videos/child-to-parent-communication-lwc",
+      "lwc_videos/component-to-component-event-communication"
     ]
   },
   "Apex-programming": {
@@ -45,6 +76,17 @@
     "Salesforce Admin": [
       "admin/salesforce-overview",
       "admin/salesforce-editions"
+    ]
+  },
+  "service-cloud": {
+    "Service Cloud Overview": [
+      "service_cloud/salesforce-service-cloud-intro",
+      "service_cloud/salesforce-service-cloud-license-setup"
+    ],
+    "Industry Knowledge": [
+      "service_cloud/contact-center-metrics",
+      "service_cloud/contact-center-kpi",
+      "service_cloud/contact-center-business-challenges"
     ]
   }
 }

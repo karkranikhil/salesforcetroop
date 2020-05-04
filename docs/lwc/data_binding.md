@@ -14,6 +14,8 @@ One-way data binding is a situation where information flows in only one directio
 
 ![One Way Data Binding](assets/LWC/oneWayDataBinding.PNG)
 
+> **After Spring ’20 release-** All fields in a Lightning web component class are reactive. If a field’s value changes, and the field is used in a template or in a getter of a property that’s used in a template, the component rerenders and displays the new value.
+
 ## Example of One-Way Data Binding
 
 1. In VS Code, open the Command Palette by pressing `Ctrl+Shift+P` on Windows or `Cmd+Shift+P` on macOS.

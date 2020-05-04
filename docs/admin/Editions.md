@@ -5,9 +5,9 @@ title: Salesforce Editions
 When we go to buy a mobile phone. We mainly look for our needs. Some people like a big camera, some like more storage and of course that phone should be in the budget. Similarly, Salesforce gives us different features and services based on our business needs, and we called it Editions. Some customers start with a basic edition and upgrade to a more feature-rich edition as business requirements evolve.
 
 ## Types of Editions
-Four types of Salesforce editions are mentioned below.
+There are Fives types of Salesforce editions that are mentioned below.
 
-### Essentials edition
+### Essentials edition(Starter)
 - Designed for small businesses that want to get started with a CRM system quickly. 
 - It includes intuitive walkthroughs and a setup assistant to get started
 - easy-to-use UI
@@ -32,7 +32,7 @@ Four types of Salesforce editions are mentioned below.
 - It gives you new levels of platform flexibility for managing and sharing all your information on demand. 
 - It includes all Enterprise Edition functionality, Premier Support, full mobile access, unlimited custom apps, increased storage limits, and other features.
 
-### Developer Edition
+### Developer Edition (Free)
 - Salesforce provides it free of cost to developers as a playground for their work
 - A developer account can never expire
 - It provides access to the Lightning Platform and APIs. 

@@ -104,3 +104,26 @@ In Visual Studio CodeVisual Studio Code, open the Command Palette by pressing `C
 If You see something like this, it means Salesforce Extension Pack is installed successfully.
 
 ![Salesforce cli Version number](assets/LWC/verifying_plugin.png)
+
+## Scratch Org Creation
+
+A scratch Orgs are temporary Salesforce Orgs where developers will build source code and configure an application.
+
+### Steps to create default Scratch Org 
+
+- Go to command palette in visual studio code and find `sfdx: create a default Scratch Org…`. Select the command.
+
+![Scratch org creation](assets/LWC/scratch_org.png)
+
+- Select Configuration file which automatically suggested by vs code
+
+- Give the alias name for the org
+
+- Give the no of days that you wanted to use scratch org. Maximum value is 30 Days.
+
+Once above process completed it will create a default scratch org associated with your Dev Hub Org.
+
+You can verify the scratch org 
+- first go to command palette in visual studio code and find `sfdx: Open Default org`.
+- press `Enter` it will open the your org that you have created.
+

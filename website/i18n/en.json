@@ -5,11 +5,32 @@
     "previous": "Previous",
     "tagline": "The best part of learning is sharing what you know.",
     "docs": {
+      "admin/data_security": {
+        "title": "admin/data_security"
+      },
+      "admin/Set-up-Developer-account": {
+        "title": "Set up Developer account"
+      },
       "admin/salesforce-editions": {
         "title": "Salesforce Editions"
       },
+      "admin/salesforce-object-and-fields": {
+        "title": "Salesforce Objects and Fields"
+      },
       "admin/salesforce-overview": {
         "title": "Salesforce Introduction"
+      },
+      "admin/personal_and_company_setup": {
+        "title": "Personal and Company setup"
+      },
+      "admin/salesforce-profiles": {
+        "title": "Salesforce profiles"
+      },
+      "admin/salesforce-roles": {
+        "title": "Salesforce roles"
+      },
+      "admin/sales_life_cycle": {
+        "title": "admin/sales_life_cycle"
       },
       "apex/apex-introduction": {
         "title": "Apex Introduction"
@@ -33,6 +54,15 @@
       "einstein/salesforce-analytics-query-language-saql": {
         "title": "Salesforce Analytics Query Language(SAQL)"
       },
+      "Exam_Notes/salesforce-data-management": {
+        "title": "Data management"
+      },
+      "Exam_Notes/js": {
+        "title": "Exam_Notes/js"
+      },
+      "Exam_Notes/salesforce-organizational-setup": {
+        "title": "Organizational Setup"
+      },
       "doc4": {
         "title": "Other Document"
       },
@@ -42,8 +72,53 @@
       "integration/salesforce-integration-introduction": {
         "title": "Salesforce Integration"
       },
+      "integration/linkedin": {
+        "title": "integration/linkedin"
+      },
+      "integration/twitter_integration": {
+        "title": "integration/twitter_integration"
+      },
+      "lwc_videos/build-and-deploy-lwc": {
+        "title": "Build and Deploy your first Lightning Web Component"
+      },
+      "lwc_videos/child-to-parent-communication-lwc": {
+        "title": "Child Component To Parent Component Event Communication"
+      },
+      "lwc_videos/conditional-rendering-lwc": {
+        "title": "Conditional Rendering Of Template In Lightning Web Component"
+      },
+      "lwc_videos/data-binding-lwc": {
+        "title": "Data Binding In Lightning Web Component"
+      },
+      "lwc_videos/lwc-introduction": {
+        "title": "Intro to LWC and how to setup DX environment and DX project"
+      },
+      "lwc_videos/javascript-for-building-lwc": {
+        "title": "JavaScript Concepts To Learn Before Building LWC"
+      },
+      "lwc_videos/parent-to-child-communication-lwc": {
+        "title": "Build and Deploy your first Lightning Web Component"
+      },
+      "lwc_videos/component-to-component-event-communication": {
+        "title": "Component To Component Event Communication Using PubSub Module"
+      },
+      "lwc_videos/render-multiple-template-lwc": {
+        "title": "Render Multiple templates in Lightning Web Component"
+      },
+      "lwc_videos/template-looping-lwc": {
+        "title": "Template Looping In Lightning Web Component"
+      },
       "lwc/lwc-browser-support": {
         "title": "LWC Browser support"
+      },
+      "lwc/event-with-bubbling-child-to-parent-component": {
+        "title": "Trigger event with bubbling"
+      },
+      "lwc/passing-data-with-event-child-to-parent-component": {
+        "title": "Trigger event with data"
+      },
+      "lwc/simple-event-child-to-parent-component": {
+        "title": "Trigger event without data"
       },
       "lwc/salesforce-conditional-rendering": {
         "title": "Conditional rendering"
@@ -54,11 +129,32 @@
       "lwc/LWC-introduction": {
         "title": "LWC Introduction"
       },
+      "lwc/lightning-data-service": {
+        "title": "Lightning Data Service(LDS)"
+      },
       "lwc/lwc-forEach-looping-in-template": {
         "title": "for:each loop"
       },
       "lwc/lwc-iterator-looping-in-template": {
         "title": "iterator loop"
+      },
+      "lwc/lightning-web-component-best-practices": {
+        "title": "Lightning Web Components Best Practices"
+      },
+      "lwc/calling-child-method-from-parent-component": {
+        "title": "Trigger Child method from Parent component."
+      },
+      "lwc/passing-array-data-parent-to-child-component": {
+        "title": "Communication with Array/Object data"
+      },
+      "lwc/passing-data-parent-to-child-on-action": {
+        "title": "Communication on action at parent"
+      },
+      "lwc/passing-string-data-parent-to-child-component": {
+        "title": "Communication with string data"
+      },
+      "lwc/render-multiple-template": {
+        "title": "Render multiple template"
       },
       "lwc/salesforce-dx-project-setup": {
         "title": "Salesforce DX project setup."
@@ -67,7 +163,7 @@
         "title": "Salesforce DX environment setup"
       },
       "lwc/salesforce-two-way-data-binding": {
-        "title": "Two-Way Data Binding"
+        "title": "Two-Way Data Binding (@track)"
       },
       "lwc/why-lightning-web-component": {
         "title": "Why Lightning Web Component"
@@ -77,14 +173,33 @@
       },
       "lwc1": {
         "title": "LWC Introduction"
+      },
+      "service_cloud/service-cloud-call-center-acronyms": {
+        "title": "Call Center Acronyms"
+      },
+      "service_cloud/service-cloud-case-management": {
+        "title": "Case Mangement"
+      },
+      "service_cloud/contact-center-business-challenges": {
+        "title": "Business challenges solved by service cloud"
+      },
+      "service_cloud/contact-center-kpi": {
+        "title": "Service Center KPIs"
+      },
+      "service_cloud/contact-center-metrics": {
+        "title": "Service Center Metrics"
+      },
+      "service_cloud/salesforce-service-cloud-intro": {
+        "title": "Introduction"
+      },
+      "service_cloud/salesforce-service-cloud-license-setup": {
+        "title": "Service Cloud Setup"
       }
     },
     "links": {
-      "BASICS": "BASICS",
       "LWC": "LWC",
-      "APEX": "APEX",
-      "INTEGRATION": "INTEGRATION",
-      "EINSTEIN": "EINSTEIN"
+      "LWC Videos": "LWC Videos",
+      "INTEGRATION": "INTEGRATION"
     },
     "categories": {
       "Docusaurus": "Docusaurus",
@@ -93,10 +208,15 @@
       "Lightning Web Component": "Lightning Web Component",
       "Getting Started": "Getting Started",
       "Basics fundamentals": "Basics fundamentals",
+      "Parent to Child Communication": "Parent to Child Communication",
+      "Child to Parent Communication": "Child to Parent Communication",
+      "Components communicataion": "Components communicataion",
       "Apex Programming": "Apex Programming",
       "salesforce Integration": "salesforce Integration",
       "Einstein Analytics": "Einstein Analytics",
-      "Salesforce Admin": "Salesforce Admin"
+      "Salesforce Admin": "Salesforce Admin",
+      "Service Cloud Overview": "Service Cloud Overview",
+      "Industry Knowledge": "Industry Knowledge"
     }
   },
   "pages-strings": {

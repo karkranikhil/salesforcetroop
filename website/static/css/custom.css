@@ -6,6 +6,10 @@
  */
 
 /* your custom css */
+.fb_iframe_widget_fluid_desktop{
+    justify-content: center;
+    display: flex;
+}
 .icon-flex {
   display: flex;
   justify-content: center;

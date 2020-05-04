@@ -3,6 +3,8 @@ id: lwc-browser-support
 title: LWC Browser support
 description: "Salesforce Troop LWC Browser support || Lightning web components supported by almost browser with specifi version. Below is the list of browsers that support Lightning web component with their limitations"
 ---
+<!-- <iframe frameborder="0" width="100%" height="500px" src="https://d3nm9grey5nsoo.cloudfront.net/playground.js"></iframe> -->
+
 
 Below is the list of browsers that support Lightning web component with their limitations
 

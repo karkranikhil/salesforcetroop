@@ -39,17 +39,22 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: "admin/salesforce-overview", label: "BASICS" },
+    // { doc: "admin/salesforce-overview", label: "BASICS" },
     { doc: "lwc/LWC-introduction", label: "LWC" },
-    { doc: "apex/apex-introduction", label: "APEX" },
+    { doc: "lwc_videos/lwc-introduction", label: "LWC VIDEOS" },
+    // { doc: "apex/apex-introduction", label: "APEX" },
     {
       doc: "integration/salesforce-integration-introduction",
       label: "INTEGRATION"
     },
-    {
-      doc: "einstein/salesforce-analytics-query-language-saql",
-      label: "EINSTEIN"
-    }
+    // {
+    //   doc: "einstein/salesforce-analytics-query-language-saql",
+    //   label: "EINSTEIN"
+    // },
+    // {
+    //   doc: "service_cloud/salesforce-service-cloud-intro",
+    //   label: "SERVICE CLOUD"
+    // }
   ],
 
   /****actual headerlink */
@@ -73,7 +78,7 @@ const siteConfig = {
     primaryColor: "#295646",
     secondaryColor: "#1c3c31"
   },
-  usePrism: ['jsx', 'js', 'html', 'xml', 'css'],
+  usePrism: ["jsx", "js", "html", "xml", "css"],
   /* Custom fonts for website */
   /*
   fonts: {
@@ -98,9 +103,14 @@ const siteConfig = {
 
   // Add custom scripts here that would be placed in <script> tags.
   scripts: [
-    "https://buttons.github.io/buttons.js",
-    "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
+    "/salesforcetroop/js/buttons.js",
+    "/salesforcetroop/js/clipboard.min.js",
     "/salesforcetroop/js/code-block-buttons.js"
+    // {
+    //   src:
+    //     "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=315217815749416&autoLogAppEvents=1",
+    //   async: true
+    // }
   ],
 
   // On page navigation for the current documentation page.
