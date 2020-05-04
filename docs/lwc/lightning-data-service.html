@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Lightning Data Service(LDS) · Salesforce Troop</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&#x27;Salesforce Troop LWC Introduction || Lightning web components are custom HTML elements built using HTML and modern JavaScript. Lightning Web Components uses core Web Components standards and provides us only what&#x27;s necessary to perform well in browsers supported by Salesforce&#x27;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Lightning Data Service(LDS) · Salesforce Troop"/><meta property="og:type" content="website"/><meta property="og:url" content="https://karkranikhil.github.io/salesforcetroop/"/><meta property="og:description" content="&#x27;Salesforce Troop LWC Introduction || Lightning web components are custom HTML elements built using HTML and modern JavaScript. Lightning Web Components uses core Web Components standards and provides us only what&#x27;s necessary to perform well in browsers supported by Salesforce&#x27;"/><meta property="og:image" content="https://karkranikhil.github.io/salesforcetroop/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://karkranikhil.github.io/salesforcetroop/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/salesforcetroop/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="/salesforcetroop/js/buttons.js"></script><script type="text/javascript" src="/salesforcetroop/js/clipboard.min.js"></script><script type="text/javascript" src="/salesforcetroop/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/salesforcetroop/js/scrollSpy.js"></script><link rel="stylesheet" href="/salesforcetroop/css/prism.css"/><link rel="stylesheet" href="/salesforcetroop/css/main.css"/><script src="/salesforcetroop/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/salesforcetroop/"><img class="logo" src="/salesforcetroop/img/favicon.ico" alt="Salesforce Troop"/><h2 class="headerTitleWithLogo">Salesforce Troop</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/salesforcetroop/docs/lwc/LWC-introduction" target="_self">LWC</a></li><li class=""><a href="/salesforcetroop/docs/lwc_videos/lwc-introduction" target="_self">LWC VIDEOS</a></li><li class=""><a href="/salesforcetroop/docs/integration/salesforce-integration-introduction" target="_self">INTEGRATION</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Lightning Data Service(LDS)</h1></header><article><div><span><p>Lightning Data Service is a centralized data caching mechanism that is used to create,read, update and delete a record without server-side apex code.</p>
+<ul>
+<li>It supports the sharing rules and field-level security as well. Which means user will never has access to unauthorized data or will never able to update the field for which he doesn't have access.</li>
+<li>Lightning data service returns the data and metadata in the same request</li>
+</ul>
+<p>Whenever we have to work with salesforce data and metadata for salesforce record we use Lightning data service.</p>
+<p>Lightning data service is built on top of User interface api. So whenever client has to display some data on browser it send the resquest, the request will first go to User interface api then to salesforce database. similary the response send back first to the user interface api and then to the client and once data recieve it displays data on the browser.</p>
+<p><img src="/salesforcetroop/docs/assets/LWC/Lightning_data_Service.PNG" alt="Lightning data service"></p>
+<h2><a class="anchor" aria-hidden="true" id="actions-performs-by-lightning-data-service-behind-the-scene"></a><a href="#actions-performs-by-lightning-data-service-behind-the-scene" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Actions performs by Lightning Data Service behind the scene.</h2>
+<ol>
+<li>It loads the record data progressively to imporves the proformance of our lightning web component.</li>
+<li>It Caches the result on the client side that also improves the performance by reducing the network calls.</li>
+<li>Invalidates cache, whenever any change happens to the same record data or metadata. Always keep the updated copy of record in the cache.</li>
+<li>Records loaded in Lightning Data Service are cached and shared across components. If same service call is happening in the different components at the same time it calls only once and serve the all component by the Cache data.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="advantages-of-lds"></a><a href="#advantages-of-lds" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advantages of LDS</h2>
+<ol>
+<li>No apex side controller required</li>
+<li>Caching techninque inproves the performance</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="lds-based-components"></a><a href="#lds-based-components" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>LDS Based components</h2>
+<p>There are three components that are built on Lightning Data Service(LDS)</p>
+<p><strong>1.<code>lightning-record-view-form</code></strong></p>
+<ul>
+<li>This form will allow you to view the record and to customize fields in the form.</li>
+</ul>
+<p><strong>2.<code>lightning-record-edit-form</code></strong></p>
+<ul>
+<li>This form will allow you to create and edit the record and to customize fields in the form.</li>
+</ul>
+<p><strong>3.<code>lightning-record-form</code></strong></p>
+<ul>
+<li>This form allow us to display a form with standard Lightning UI to view, edit, or create a record.</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#actions-performs-by-lightning-data-service-behind-the-scene">Actions performs by Lightning Data Service behind the scene.</a></li><li><a href="#advantages-of-lds">Advantages of LDS</a></li><li><a href="#lds-based-components">LDS Based components</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="icon-flex"><a href="https://www.linkedin.com/in/nikhil-karkra-73a15319/" target="_blank" rel="noreferrer noopener" class=""><img src="/salesforcetroop/img/linkedin.svg" alt="Linkedin URL" width="64" height="64"/></a> <a href="https://www.linkedin.com/in/nikhil-karkra-73a15319/" target="_blank" rel="noreferrer noopener" class=""><img src="/salesforcetroop/img/twitter.svg" alt="Linkedin URL" width="64" height="64"/></a><a href="https://www.facebook.com/Salesforce-Troop-104653287818364" target="_blank" rel="noreferrer noopener" class=""><img src="/salesforcetroop/img/facebook.svg" alt="facebook URL" width="64" height="64"/></a><div><a class="github-button" href="https://github.com/karkranikhil/salesforcetroop" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 Salesforce Troop</section></footer></div><script>window.fbAsyncInit = function() {FB.init({appId:'254156535575786',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+                </script><script>
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '1499316810226778');
+              fbq('track', 'PageView');
+                </script></body></html>
